@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Booking confirmed{% endblock %}
+
+{% block content %}
+<div class="panel confirm">
+    <div class="tick">✓</div>
+    <h1>Your booking is confirmed</h1>
+    <p>Booking reference</p>
+    <div class="ref">{{ b.reference }}</div>
+    <dl>
+        <dt>Hotel</dt><dd>{{ b.hotel_name }}, {{ b.city }}</dd>
+        <dt>Room</dt><dd>{{ b.room_name }}</dd>
+        <dt>Guest</dt><dd>{{ b.guest_name }} ({{ b.guests }} guest{{ 's' if b.guests != 1 }})</dd>
+        <dt>Dates</dt><dd>{{ b.check_in }} → {{ b.check_out }}</dd>
+        <dt>Total</dt><dd><strong>MYR {{ "%.0f"|format(b.total) }}</strong></dd>
+    </dl>
+    <a class="btn btn-primary" href="{{ url_for('my_bookings', email=b.email) }}">View my bookings</a>
+    <a class="btn btn-secondary" href="{{ url_for('index') }}">Book another stay</a>
+</div>
+{% endblock %}

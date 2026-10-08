@@ -1,0 +1,5 @@
+# keep the user's own data out of the image - it is mounted at run time instead
+data/
+__pycache__/
+*.pyc
+.DS_Store

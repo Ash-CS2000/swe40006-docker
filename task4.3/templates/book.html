@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Complete your booking{% endblock %}
+
+{% block content %}
+<h1>Complete your booking</h1>
+<div class="two-col">
+    <form class="panel" method="post">
+        <h2>Your details</h2>
+        <input type="hidden" name="check_in" value="{{ check_in }}">
+        <input type="hidden" name="check_out" value="{{ check_out }}">
+        <input type="hidden" name="guests" value="{{ guests }}">
+        <label class="field">
+            <span>Full name</span>
+            <input type="text" name="guest_name" value="{{ request.form.guest_name }}" required>
+        </label>
+        <label class="field">
+            <span>Email address</span>
+            <input type="email" name="email" value="{{ request.form.email }}" required>
+            <small class="muted">You'll use this to find your booking later.</small>
+        </label>
+        <button class="btn btn-primary wide" type="submit">Confirm booking</button>
+    </form>
+
+    <aside class="panel summary">
+        <h2>Booking summary</h2>
+        <p><strong>{{ r.hotel_name }}</strong><br><span class="muted">{{ r.city }}</span></p>
+        <dl>
+            <dt>Room</dt><dd>{{ r.name }}</dd>
+            <dt>Check-in</dt><dd>{{ check_in }}</dd>
+            <dt>Check-out</dt><dd>{{ check_out }}</dd>
+            <dt>Guests</dt><dd>{{ guests }}</dd>
+            <dt>Nights</dt><dd>{{ nights }} × MYR {{ "%.0f"|format(r.price) }}</dd>
+        </dl>
+        <div class="total">Total <span>MYR {{ "%.0f"|format(total) }}</span></div>
+    </aside>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+reference,hotel,city,room_type,guest_name,check_in,check_out,guests,total,status
+SE-KN64TZ,Old Town Bangkok Hotel,Bangkok,Deluxe King,Chloe,2026-07-01,2026-07-04,1,504,confirmed
+SE-EEXUGY,George Town Heritage House,Penang,Standard Double,Nurul,2026-07-03,2026-07-08,1,1100,confirmed
+SE-H4QK3H,Bukit Bintang Boutique,Kuala Lumpur,Deluxe King,Aung,2026-07-05,2026-07-09,1,1232,confirmed
+SE-RW7FUW,Batu Ferringhi Beach Resort,Penang,Family Room,Priya,2026-07-06,2026-07-08,1,1444,confirmed
+SE-FKZUKD,Batu Ferringhi Beach Resort,Penang,Standard Double,Hannah,2026-07-10,2026-07-11,2,380,confirmed
+SE-Z49TEX,George Town Heritage House,Penang,Family Room,Ahmad,2026-07-11,2026-07-12,2,418,confirmed
+SE-SWL42X,Chinatown Backpacker Inn,Kuala Lumpur,Family Room,Siti,2026-07-11,2026-07-14,2,342,confirmed
+SE-AT9MW2,Old Town Bangkok Hotel,Bangkok,Deluxe King,Somchai,2026-07-11,2026-07-15,1,672,confirmed
+SE-55NLY2,Old Town Bangkok Hotel,Bangkok,Family Room,Ahmad,2026-07-11,2026-07-14,1,684,confirmed
+SE-NMMJBQ,George Town Heritage House,Penang,Deluxe King,Mei Ling,2026-07-14,2026-07-15,2,308,cancelled
+SE-J6ZEKG,Batu Ferringhi Beach Resort,Penang,Family Room,Nurul,2026-07-14,2026-07-16,2,1444,confirmed
+SE-PZLVSN,Batu Ferringhi Beach Resort,Penang,Standard Double,Chloe,2026-07-14,2026-07-19,1,1900,confirmed
+SE-8CHTPV,Petronas View Suites,Kuala Lumpur,Standard Double,Chloe,2026-07-20,2026-07-25,1,1900,confirmed
+SE-TTC97Q,George Town Heritage House,Penang,Family Room,Mei Ling,2026-07-21,2026-07-24,2,1254,confirmed
+SE-AZL735,George Town Heritage House,Penang,Standard Double,Siti,2026-07-23,2026-07-27,2,880,confirmed
+SE-G3L6YJ,Sukhumvit Sky Residence,Bangkok,Deluxe King,Aung,2026-07-24,2026-07-28,1,2128,cancelled
+SE-PQJ52F,Petronas View Suites,Kuala Lumpur,Family Room,Kenji,2026-07-26,2026-07-31,3,3610,confirmed
+SE-PLQB4N,Chinatown Backpacker Inn,Kuala Lumpur,Family Room,Chloe,2026-07-28,2026-07-29,1,114,confirmed
+SE-SCBDW3,Old Town Bangkok Hotel,Bangkok,Deluxe King,Kenji,2026-07-29,2026-07-31,1,336,confirmed
+SE-3HGJ22,Sukhumvit Sky Residence,Bangkok,Deluxe King,Somchai,2026-07-30,2026-08-04,1,2660,confirmed
+SE-PR56FA,Petronas View Suites,Kuala Lumpur,Standard Double,Kenji,2026-07-31,2026-08-02,2,760,confirmed
+SE-QYHL6C,Sukhumvit Sky Residence,Bangkok,Family Room,Raj,2026-07-31,2026-08-03,2,2166,confirmed
+SE-TFPYRB,Bukit Bintang Boutique,Kuala Lumpur,Standard Double,Daniel,2026-07-31,2026-08-02,2,440,confirmed
+SE-5AZXTJ,Sukhumvit Sky Residence,Bangkok,Family Room,Somchai,2026-08-02,2026-08-07,3,3610,cancelled
+SE-8K53QC,Batu Ferringhi Beach Resort,Penang,Standard Double,Siti,2026-08-02,2026-08-06,2,1520,confirmed
+SE-HZX6CP,Bukit Bintang Boutique,Kuala Lumpur,Standard Double,Aung,2026-08-05,2026-08-07,1,440,confirmed
+SE-WN9T8D,Batu Ferringhi Beach Resort,Penang,Standard Double,Daniel,2026-08-05,2026-08-08,1,1140,confirmed
+SE-RL8J5D,Petronas View Suites,Kuala Lumpur,Family Room,Mei Ling,2026-08-06,2026-08-10,4,2888,confirmed
+SE-KPNKEP,Bukit Bintang Boutique,Kuala Lumpur,Family Room,Kenji,2026-08-08,2026-08-13,2,2090,confirmed
+SE-YEBBK8,Langkawi Rainforest Lodge,Langkawi,Standard Double,Somchai,2026-08-08,2026-08-09,2,220,cancelled
+SE-U7U7N8,Bukit Bintang Boutique,Kuala Lumpur,Standard Double,Siti,2026-08-09,2026-08-10,1,220,confirmed
+SE-5LYK84,Old Town Bangkok Hotel,Bangkok,Deluxe King,Ahmad,2026-08-11,2026-08-12,1,168,confirmed
+SE-9NS9XT,Langkawi Rainforest Lodge,Langkawi,Deluxe King,Kenji,2026-08-11,2026-08-12,1,308,confirmed
+SE-KMESU3,Petronas View Suites,Kuala Lumpur,Standard Double,Raj,2026-08-11,2026-08-12,1,380,cancelled
+SE-JAZ4UX,Batu Ferringhi Beach Resort,Penang,Deluxe King,Raj,2026-08-13,2026-08-18,2,2660,confirmed
+SE-6MF4YV,Batu Ferringhi Beach Resort,Penang,Standard Double,Somchai,2026-08-14,2026-08-15,1,380,confirmed
+SE-KYA4NA,Old Town Bangkok Hotel,Bangkok,Family Room,Somchai,2026-08-15,2026-08-20,1,1140,confirmed
+SE-MGJ7WV,Sukhumvit Sky Residence,Bangkok,Family Room,Raj,2026-08-16,2026-08-18,2,1444,confirmed
+SE-6GHD26,Petronas View Suites,Kuala Lumpur,Deluxe King,Kenji,2026-08-16,2026-08-17,1,532,confirmed
+SE-T2SALA,George Town Heritage House,Penang,Standard Double,Nurul,2026-08-17,2026-08-19,2,440,confirmed
+SE-93WE8E,Sukhumvit Sky Residence,Bangkok,Family Room,Chloe,2026-08-18,2026-08-22,3,2888,confirmed
+SE-D8W4YP,Langkawi Rainforest Lodge,Langkawi,Standard Double,Hannah,2026-08-23,2026-08-27,2,880,confirmed
+SE-QZX9DN,Old Town Bangkok Hotel,Bangkok,Deluxe King,Nurul,2026-08-24,2026-08-28,1,672,confirmed
+SE-XRGGBZ,Sukhumvit Sky Residence,Bangkok,Deluxe King,Aung,2026-08-24,2026-08-29,2,2660,cancelled
+SE-F8SBH5,Petronas View Suites,Kuala Lumpur,Standard Double,Priya,2026-08-24,2026-08-26,1,760,confirmed
+SE-J54C6H,Sukhumvit Sky Residence,Bangkok,Deluxe King,Priya,2026-08-25,2026-08-30,2,2660,confirmed
+SE-59KVVZ,Old Town Bangkok Hotel,Bangkok,Deluxe King,Siti,2026-08-26,2026-08-29,1,504,confirmed
+SE-9K8YQK,Chinatown Backpacker Inn,Kuala Lumpur,Standard Double,Kenji,2026-08-26,2026-08-29,2,180,cancelled
+SE-UZCKZF,Petronas View Suites,Kuala Lumpur,Deluxe King,Raj,2026-08-26,2026-08-27,2,532,confirmed
+SE-PJH7Q5,George Town Heritage House,Penang,Family Room,Ahmad,2026-08-27,2026-08-29,1,836,cancelled
+SE-86JSF7,Old Town Bangkok Hotel,Bangkok,Standard Double,Somchai,2026-08-28,2026-08-29,2,120,confirmed
+SE-5CPWGY,Petronas View Suites,Kuala Lumpur,Standard Double,Priya,2026-08-30,2026-09-04,2,1900,confirmed
+SE-TZ6UHR,Batu Ferringhi Beach Resort,Penang,Family Room,Kenji,2026-09-01,2026-09-03,2,1444,cancelled
+SE-65CPJA,Batu Ferringhi Beach Resort,Penang,Family Room,Raj,2026-09-01,2026-09-04,3,2166,confirmed
+SE-NX3Z47,Batu Ferringhi Beach Resort,Penang,Deluxe King,Chloe,2026-09-01,2026-09-02,1,532,confirmed
+SE-2GT7QY,Langkawi Rainforest Lodge,Langkawi,Family Room,Mei Ling,2026-09-02,2026-09-06,1,1672,confirmed
+SE-X8ZGP8,Old Town Bangkok Hotel,Bangkok,Standard Double,Nurul,2026-09-05,2026-09-10,2,600,confirmed
+SE-BS5CC5,Sukhumvit Sky Residence,Bangkok,Family Room,Kenji,2026-09-06,2026-09-08,1,1444,confirmed
+SE-AE59C3,Sukhumvit Sky Residence,Bangkok,Standard Double,Daniel,2026-09-06,2026-09-10,2,1520,confirmed
+SE-GZJU2V,Langkawi Rainforest Lodge,Langkawi,Standard Double,Mei Ling,2026-09-07,2026-09-09,1,440,confirmed
+SE-YNXM6Q,Old Town Bangkok Hotel,Bangkok,Standard Double,Siti,2026-09-08,2026-09-10,1,240,cancelled
+SE-QV6ZVA,Batu Ferringhi Beach Resort,Penang,Family Room,Siti,2026-09-08,2026-09-12,1,2888,confirmed
+SE-UAYBCB,Petronas View Suites,Kuala Lumpur,Family Room,Nurul,2026-09-09,2026-09-11,1,1444,confirmed
+SE-KG3VLQ,Batu Ferringhi Beach Resort,Penang,Deluxe King,Somchai,2026-09-09,2026-09-10,1,532,confirmed
+SE-M9TMQK,Langkawi Rainforest Lodge,Langkawi,Deluxe King,Siti,2026-09-09,2026-09-14,1,1540,confirmed
+SE-N759HN,Langkawi Rainforest Lodge,Langkawi,Deluxe King,Kenji,2026-09-09,2026-09-14,1,1540,confirmed
+SE-YWR3CH,Old Town Bangkok Hotel,Bangkok,Deluxe King,Hannah,2026-09-10,2026-09-12,1,336,confirmed
+SE-VPUS7G,George Town Heritage House,Penang,Family Room,Hannah,2026-09-15,2026-09-16,3,418,confirmed
+SE-P7QF5Q,Langkawi Rainforest Lodge,Langkawi,Deluxe King,Siti,2026-09-17,2026-09-22,2,1540,confirmed
+SE-UYBHKC,Batu Ferringhi Beach Resort,Penang,Family Room,Siti,2026-09-18,2026-09-21,1,2166,confirmed
+SE-HL2B43,Old Town Bangkok Hotel,Bangkok,Deluxe King,Kenji,2026-09-20,2026-09-25,2,840,cancelled
+SE-EQBNGL,Petronas View Suites,Kuala Lumpur,Standard Double,Kenji,2026-09-21,2026-09-25,2,1520,confirmed
+SE-N7QJHT,Langkawi Rainforest Lodge,Langkawi,Standard Double,Daniel,2026-09-22,2026-09-26,2,880,confirmed
+SE-Q77AVU,Old Town Bangkok Hotel,Bangkok,Standard Double,Mei Ling,2026-09-24,2026-09-27,1,360,confirmed
+SE-73WX7P,Sukhumvit Sky Residence,Bangkok,Standard Double,Ahmad,2026-09-26,2026-09-28,1,760,confirmed
+SE-9ZPDW5,George Town Heritage House,Penang,Family Room,Priya,2026-09-26,2026-09-29,2,1254,confirmed
+SE-RUHWQX,Old Town Bangkok Hotel,Bangkok,Family Room,Priya,2026-09-26,2026-09-28,3,456,confirmed
+SE-5VD93M,George Town Heritage House,Penang,Standard Double,Kenji,2026-09-28,2026-10-01,2,660,cancelled
+SE-TD8YEB,Sukhumvit Sky Residence,Bangkok,Family Room,Nurul,2026-09-29,2026-10-03,2,2888,confirmed
+SE-PRRQEG,Batu Ferringhi Beach Resort,Penang,Family Room,Chloe,2026-09-29,2026-10-02,2,2166,confirmed

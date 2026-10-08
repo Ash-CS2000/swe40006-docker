@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Not found{% endblock %}
+{% block content %}
+<div class="panel confirm">
+    <h1>Page not found</h1>
+    <p class="muted">That hotel or booking doesn't exist.</p>
+    <a class="btn btn-primary" href="{{ url_for('index') }}">Back to search</a>
+</div>
+{% endblock %}

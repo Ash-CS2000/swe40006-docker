@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}StayEasy{% endblock %} · StayEasy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="topbar">
+    <div class="wrap topbar-inner">
+        <a class="logo" href="{{ url_for('index') }}">Stay<span>Easy</span></a>
+        <nav>
+            <a href="{{ url_for('index') }}">Stays</a>
+            <a href="{{ url_for('my_bookings') }}">My bookings</a>
+        </nav>
+    </div>
+    {% block hero %}{% endblock %}
+</header>
+
+<main class="wrap">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        StayEasy · SWE40006 Task 4.3 · Aung Si Hein
+        <span class="server">Served by container <b>{{ hostname }}</b> on <b>{{ arch }}</b></span>
+    </div>
+</footer>
+</body>
+</html>

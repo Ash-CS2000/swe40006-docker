@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}My bookings{% endblock %}
+
+{% block content %}
+<h1>My bookings</h1>
+<form class="searchbar inline" method="get">
+    <label class="grow"><span>Email used when booking</span>
+        <input type="email" name="email" value="{{ email }}" placeholder="you@example.com" required></label>
+    <button class="btn btn-primary" type="submit">Find bookings</button>
+</form>
+
+{% if email %}
+    {% if bookings %}
+    <table class="rooms">
+        <thead><tr><th>Reference</th><th>Hotel</th><th>Dates</th><th>Total</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+        {% for b in bookings %}
+            <tr class="{{ 'cancelled' if b.status == 'cancelled' }}">
+                <td><a href="{{ url_for('confirmation', reference=b.reference) }}">{{ b.reference }}</a></td>
+                <td>{{ b.hotel_name }}<br><span class="muted">{{ b.room_name }}, {{ b.city }}</span></td>
+                <td>{{ b.check_in }} → {{ b.check_out }}</td>
+                <td>MYR {{ "%.0f"|format(b.total) }}</td>
+                <td><span class="status status-{{ b.status }}">{{ b.status|capitalize }}</span></td>
+                <td>
+                    {% if b.status == 'confirmed' %}
+                    <form method="post" action="{{ url_for('cancel', reference=b.reference) }}"
+                          onsubmit="return confirm('Cancel booking {{ b.reference }}?');">
+                        <button class="btn btn-danger" type="submit">Cancel</button>
+                    </form>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="muted">No bookings found for {{ email }}.</p>
+    {% endif %}
+{% endif %}
+{% endblock %}

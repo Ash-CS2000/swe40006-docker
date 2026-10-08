@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Find your next stay{% endblock %}
+
+{% block hero %}
+<section class="hero">
+    <div class="wrap">
+        <h1>Find your next stay</h1>
+        <p>Search deals on hotels across Malaysia and Thailand.</p>
+        <form class="searchbar" action="{{ url_for('index') }}" method="get">
+            <label>
+                <span>Destination</span>
+                <select name="city">
+                    <option value="">All destinations</option>
+                    {% for c in cities %}
+                        <option value="{{ c }}" {{ 'selected' if c == city }}>{{ c }}</option>
+                    {% endfor %}
+                </select>
+            </label>
+            <label>
+                <span>Check-in</span>
+                <input type="date" name="check_in" value="{{ check_in }}" min="{{ today }}">
+            </label>
+            <label>
+                <span>Check-out</span>
+                <input type="date" name="check_out" value="{{ check_out }}" min="{{ today }}">
+            </label>
+            <label class="small">
+                <span>Guests</span>
+                <input type="number" name="guests" value="{{ guests }}" min="1" max="4">
+            </label>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<h2 class="results-title">
+    {{ city or "All destinations" }}: {{ results|length }} propert{{ 'y' if results|length == 1 else 'ies' }} found
+    {% if nights %}<small>· {{ nights }} night{{ 's' if nights != 1 }}, {{ guests }} guest{{ 's' if guests != 1 }}</small>{% endif %}
+</h2>
+
+<div class="results">
+    {% for item in results %}
+    {% set h = item.hotel %}
+    <article class="card">
+        <div class="card-banner" style="background: {{ h.color }}">
+            <span>{{ h.area }}</span>
+        </div>
+        <div class="card-body">
+            <div class="card-head">
+                <div>
+                    <h3><a href="{{ url_for('hotel', hotel_id=h.id, check_in=check_in, check_out=check_out, guests=guests) }}">{{ h.name }}</a></h3>
+                    <div class="stars">{{ '★' * h.stars }}</div>
+                    <div class="muted">{{ h.area }}, {{ h.city }}</div>
+                </div>
+                <div class="score">
+                    <span class="score-label">{{ 'Superb' if h.rating >= 9 else 'Very good' if h.rating >= 8 else 'Good' }}</span>
+                    <span class="score-badge">{{ "%.1f"|format(h.rating) }}</span>
+                </div>
+            </div>
+            <p>{{ h.description }}</p>
+            <div class="card-foot">
+                {% if item.from_price %}
+                    <div>
+                        <span class="muted">From</span>
+                        <span class="price">MYR {{ "%.0f"|format(item.from_price) }}</span>
+                        <span class="muted">/ night</span>
+                    </div>
+                    <a class="btn btn-primary" href="{{ url_for('hotel', hotel_id=h.id, check_in=check_in, check_out=check_out, guests=guests) }}">See availability</a>
+                {% else %}
+                    <span class="soldout">No rooms available for your dates or party size</span>
+                {% endif %}
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}

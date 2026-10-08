@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}{{ h.name }}{% endblock %}
+
+{% block content %}
+<a class="back" href="{{ url_for('index', city=h.city, check_in=check_in, check_out=check_out, guests=guests) }}">← Back to {{ h.city }} results</a>
+
+<section class="hotel-header" style="background: {{ h.color }}">
+    <div>
+        <div class="stars">{{ '★' * h.stars }}</div>
+        <h1>{{ h.name }}</h1>
+        <p>{{ h.area }}, {{ h.city }}</p>
+    </div>
+    <span class="score-badge big">{{ "%.1f"|format(h.rating) }}</span>
+</section>
+
+<p class="lead">{{ h.description }}</p>
+<ul class="amenities">
+    {% for a in amenities %}<li>✓ {{ a }}</li>{% endfor %}
+</ul>
+
+<form class="searchbar inline" method="get">
+    <label><span>Check-in</span><input type="date" name="check_in" value="{{ check_in }}" min="{{ today }}"></label>
+    <label><span>Check-out</span><input type="date" name="check_out" value="{{ check_out }}" min="{{ today }}"></label>
+    <label class="small"><span>Guests</span><input type="number" name="guests" value="{{ guests }}" min="1" max="4"></label>
+    <button class="btn btn-secondary" type="submit">Update</button>
+</form>
+
+<h2>Available rooms {% if nights %}<small>for {{ nights }} night{{ 's' if nights != 1 }}</small>{% endif %}</h2>
+<table class="rooms">
+    <thead>
+        <tr><th>Room type</th><th>Sleeps</th><th>Price / night</th><th>Total</th><th></th></tr>
+    </thead>
+    <tbody>
+    {% for item in rooms %}
+    {% set r = item.room %}
+        <tr>
+            <td>
+                <strong>{{ r.name }}</strong>
+                {% if 0 < item.left <= 1 %}<div class="warn">Only {{ item.left }} left!</div>{% endif %}
+            </td>
+            <td>{{ '👤' * r.capacity }}</td>
+            <td>MYR {{ "%.0f"|format(r.price) }}</td>
+            <td><strong>MYR {{ "%.0f"|format(item.total) }}</strong></td>
+            <td>
+                {% if not item.fits %}
+                    <span class="muted">Too small for {{ guests }} guests</span>
+                {% elif item.left <= 0 %}
+                    <span class="soldout">Sold out</span>
+                {% else %}
+                    <a class="btn btn-primary" href="{{ url_for('book', room_id=r.id, check_in=check_in, check_out=check_out, guests=guests) }}">Reserve</a>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
